@@ -26,7 +26,7 @@ export default class Button extends React.Component {
 
   render() {
     const {
-      title, isPrimary, redButton,
+      title, isPrimary,
       style, icon, className, containerClassName } = this.props;
     return (
       <div className={classnames("button-container", containerClassName)}>
