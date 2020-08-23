@@ -1,6 +1,7 @@
 .image-upload-container {
   min-height: 300px;
   min-width: 300px;
+  max-width: 100%;
   .select-image-container {
     .select-image-header {
       font-size: 24px;
@@ -25,6 +26,7 @@
   }
   .upload-image-container {
     display: flex;
+    flex-flow: row wrap;
     .image-thumbnail-wrapper {
       margin-right: 16px;
       position: relative;
@@ -42,6 +44,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      margin-top: 16px;
       border: 1px dashed rgba(0, 0, 0, 0.08);
       background-color: rgba(52, 69, 89, 0.02);
       cursor: pointer;
