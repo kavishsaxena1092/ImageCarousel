@@ -1,32 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import classnames from 'classnames';
 import './index.scss';
 
 const ImageCarosel = ({ imagesURL }) => {
   const [selectedNumber, setSelectedNumber] = useState(0);
 
-  // useEffect(() => {
-  //   const setImageInfo = ({ imagesURL }) => {
-  //     const imagesList = [];
-  //     let selectedNumber = 1;
-  //     for (let itr  = 0; itr < imagesURL.length; itr++) {
-  //       let selected = false;
-  //       if (itr === 0) {
-  //         selected = true;
-  //         selectedNumber = Number(itr) - 1;
-  //       }
-  //       imagesList.push({
-  //         url: imagesURL[itr],
-  //         selected
-  //       });
-  //     }
-  //     return { imagesList, selectedNumber };
-  //   }
+  useEffect(() => {
+    const changeNextSlide = indexDelta => {
+      console.log('In OnNextSlide');
+      const numOfImages = imagesURL.length;
+      let newSelectedNumber = (selectedNumber + indexDelta)%numOfImages;
+      if (newSelectedNumber < 0) {
+        newSelectedNumber = numOfImages + newSelectedNumber;
+      }
+      setSelectedNumber(newSelectedNumber);
+    }
+  
+    const timeInterval = setInterval(() => {
+      changeNextSlide(1);
+    }, 3000);
 
-  //   const { imagesList, selectedNumber } = setImageInfo({ imagesURL });
-  //   setImageList(imagesList);
-  //   setSelectedNumberp(selectedNumber);
-  // }, [ imagesURL ]);
+    return () => {
+      clearInterval(timeInterval);
+    };
+  }, [ selectedNumber ]);
 
   const onNextSlide = indexDelta => {
     console.log('In OnNextSlide');
