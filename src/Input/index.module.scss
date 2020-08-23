@@ -1,0 +1,36 @@
+.input-container {
+  color: #413d59;
+  font-size: 16px;
+  margin-bottom: 15px;
+
+  .input {
+    height: 48px;
+    max-height: 48px;
+    border: solid 1px #e5e5e5;
+    background-color: #ffffff;
+    outline: none;
+    width: 100%;
+    line-height: 40px;
+    padding: 0px;
+    line-height: 1.5;
+    margin-top: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    padding-left: 10px;
+    box-sizing: border-box;
+  }
+
+  .input:focus {
+    border: solid 1px black;
+  }
+
+  .error {
+    margin-top: 5px;
+    color: red;
+  }
+
+  .disabled {
+    background: #f9f9f9;
+    cursor: not-allowed;
+  }
+}

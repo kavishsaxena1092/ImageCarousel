@@ -1,0 +1,53 @@
+.image-upload-container {
+  min-height: 300px;
+  min-width: 300px;
+  .select-image-container {
+    .select-image-header {
+      font-size: 24px;
+      font-weight: 600;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.5;
+      letter-spacing: normal;
+      color: #000;
+      margin-bottom: 8px;
+      margin-top: 24px;
+    }
+  }
+  .image-submit-container {
+    padding: 16px 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    .button-container {
+      width: 200px;
+    }
+  }
+  .upload-image-container {
+    display: flex;
+    .image-thumbnail-wrapper {
+      margin-right: 16px;
+      position: relative;
+      .close-icon-wrapper {
+        position: absolute;
+        top: 30%;
+        left: 40%;
+        cursor: pointer;
+      }
+    }
+    .upload-image {
+      width: 150px;
+      height: 104px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: 1px dashed rgba(0, 0, 0, 0.08);
+      background-color: rgba(52, 69, 89, 0.02);
+      cursor: pointer;
+      .upload-image-text {
+        margin-top: 10px;
+      }
+    }
+  }
+}
