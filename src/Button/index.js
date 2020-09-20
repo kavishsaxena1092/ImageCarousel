@@ -4,13 +4,6 @@ import classnames from 'classnames';
 import './index.scss';
 
 export default class Button extends React.Component {
-  static defaultProps = {
-    isActive: true,
-    secondaryGreen: false,
-    isPrimary: true,
-    redButton: false,
-  };
-
   constructor(props) {
     super(props);
     this.onClick = this.onClick.bind(this);
