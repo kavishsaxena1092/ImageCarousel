@@ -1,5 +1,5 @@
 import React from "react";
-import "./index.scss";
+import "./index.css";
 
 const TextInput = ({ type = "text", label, value, onChange }) => (
   <div className="simple-form-group">

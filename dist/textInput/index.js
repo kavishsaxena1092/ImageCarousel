@@ -1,39 +1,24 @@
-var _jsxFileName = "/Users/kavish/VS Code Project/ImageCarosel/src/lib/textInput/index.js";
 import React from "react";
-import "./index.scss";
+import "./index.css";
 
-const TextInput = ({
-  type = "text",
-  label,
-  value,
-  onChange
-}) => /*#__PURE__*/React.createElement("div", {
-  className: "simple-form-group",
-  __self: this,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 5,
-    columnNumber: 3
-  }
-}, label && /*#__PURE__*/React.createElement("label", {
-  className: "simple-text-label",
-  __self: this,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 6,
-    columnNumber: 15
-  }
-}, label), /*#__PURE__*/React.createElement("input", {
-  type: type,
-  className: "simple-text-input",
-  value: value,
-  onChange: e => onChange && onChange(e.target.value),
-  __self: this,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 7,
-    columnNumber: 5
-  }
-}));
+var TextInput = function TextInput(_ref) {
+  var _ref$type = _ref.type,
+      type = _ref$type === void 0 ? "text" : _ref$type,
+      label = _ref.label,
+      value = _ref.value,
+      _onChange = _ref.onChange;
+  return /*#__PURE__*/React.createElement("div", {
+    className: "simple-form-group"
+  }, label && /*#__PURE__*/React.createElement("label", {
+    className: "simple-text-label"
+  }, label), /*#__PURE__*/React.createElement("input", {
+    type: type,
+    className: "simple-text-input",
+    value: value,
+    onChange: function onChange(e) {
+      return _onChange && _onChange(e.target.value);
+    }
+  }));
+};
 
 export default TextInput;
